@@ -16,8 +16,8 @@ paths:
         '200':
           description: >-
             internal ID ,exam code, and protected header need to be taken from
-            "data"["ID"], "data"["Attributes"]["TETSebHeader"] and
-            "data"["Attributes"]["TETExamLink"]
+            data→ID, data→Attributes→TETSebHeader and
+            data→Attributes→TETExamLink
           content:
             application/json:
               schema:

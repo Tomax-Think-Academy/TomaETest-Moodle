@@ -187,8 +187,6 @@ components:
           items:
             type: object
             properties:
-              Active:
-                type: boolean
               UserName:
                 type: string
                 example: 111222333
@@ -210,18 +208,10 @@ components:
                   TETTextToSpeech:
                     type: integer
                     example: 1
-                  TETParticipantExtendedTime:
-                    type: string
-                    example: 500
                   TETParticipantEmail:
                     type: string
                     example: firstname@gmail.com
-              ExamPartAttrs:
-                type: object
-                properties:
-                  TETParticipantIdentity:
-                    type: string
-                    example: 123
+            
         Users:
           type: array
           items:
@@ -284,8 +274,7 @@ components:
                   type: string
                   example: 'http://quizURL.com'
                 PassToTG:
-                  type: string
-                  example: scanning module
+                  type: boolean
             TETExamRecordingParticipantView:
               type: boolean
             TETExamUseUnlockParticipantPassword:

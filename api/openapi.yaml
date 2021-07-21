@@ -181,6 +181,69 @@ components:
       type: object
       properties:
         examParameter:
+          $ref: '#/components/schemas/examParameter'
+        examParticipants:
+          type: array
+          items:
+            type: object
+            properties:
+              Active:
+                type: boolean
+              UserName:
+                type: string
+                example: 111222333
+              Attributes:
+                type: object
+                properties:
+                  TETParticipantIdentity:
+                    type: string
+                    example: 123
+                  TETParticipantFirstName:
+                    type: string
+                    example: firstname
+                  TETParticipantLastName:
+                    type: string
+                    example: lastname
+                  TETParticipantPhone:
+                    type: string
+                    example: 0501234567
+                  TETTextToSpeech:
+                    type: integer
+                    example: 1
+                  TETParticipantExtendedTime:
+                    type: string
+                    example: 500
+                  TETParticipantEmail:
+                    type: string
+                    example: firstname@gmail.com
+              ExamPartAttrs:
+                type: object
+                properties:
+                  TETParticipantIdentity:
+                    type: string
+                    example: 123
+        Users:
+          type: array
+          items:
+            type: object
+            properties:
+              Role: 
+                type: string
+                example: teacher
+              TETExternalID:
+                type: string
+                example:  123456
+              UserName:
+                type: string
+                example: user
+              TETUserFirstName:
+                type: string
+                example: firstName
+              TETUserLastName: 
+                type: string
+                example: lastName
+            
+    examParameter:
           type: object
           properties:
             TETExamDate:
@@ -383,8 +446,7 @@ components:
             Active:
               type: boolean
             Attributes:
-              type: object
-              example: object containing the new / updated exam attributes
+              $ref: '#/components/schemas/examParameter'
             InsertDate:
               type: string
             UpdateDate:

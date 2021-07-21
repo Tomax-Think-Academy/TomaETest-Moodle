@@ -431,7 +431,12 @@ components:
           type: object
           properties:
             Attributes:
-              $ref: '#/components/schemas/examParameter'
+              type: object
+              properties:
+                TETSebHeader:
+                  type: string
+                TETExamLink:
+                  type: string
             ID:
               type: integer
         Moment:

@@ -270,11 +270,9 @@ components:
             TETExam3rdPartyConfig:
               type: object
               properties:
-                QuizURL:
-                  type: string
-                  example: 'http://quizURL.com'
                 PassToTG:
                   type: boolean
+                  example: false
             TETExamRecordingParticipantView:
               type: boolean
             TETExamUseUnlockParticipantPassword:
@@ -432,20 +430,8 @@ components:
         data:
           type: object
           properties:
-            Active:
-              type: boolean
             Attributes:
               $ref: '#/components/schemas/examParameter'
-            InsertDate:
-              type: string
-            UpdateDate:
-              type: string
-            InsertUserID:
-              type: string
-              example: 1
-            UpdateUserID:
-              type: string
-              example: 1
             ID:
               type: integer
         Moment:

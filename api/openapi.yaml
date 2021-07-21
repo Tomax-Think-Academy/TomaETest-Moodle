@@ -541,10 +541,10 @@ components:
     setSubmissionRequestData:
       type: object
       properties:
-        ParID:
+        parID:
           type: string
           example: 1234
-        ExamID:
+        examID:
           type: string
           example: 1234
     setSubmissionRequestResponse:
